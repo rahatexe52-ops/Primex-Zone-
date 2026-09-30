@@ -9,7 +9,15 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0
+}
+
+html{
+  scroll-behavior:smooth
+}
 
 body{
   background:#050505;
@@ -19,7 +27,7 @@ body{
 
 header{
   text-align:center;
-  padding:30px 15px;
+  padding:45px 15px 35px;
   border-bottom:1px solid #222
 }
 
@@ -31,6 +39,41 @@ header h1{
 header p{
   color:#888;
   margin-top:8px
+}
+
+/* WELCOME */
+.welcome{
+  text-align:center;
+  padding:55px 20px 35px
+}
+
+.welcome h2{
+  font-size:30px;
+  margin-bottom:12px
+}
+
+.welcome p{
+  color:#999;
+  font-size:15px;
+  margin-bottom:22px
+}
+
+.product-list-button{
+  display:inline-block;
+  width:auto;
+  padding:13px 24px;
+  margin-top:5px;
+  background:#fff;
+  color:#000;
+  border:none;
+  border-radius:10px;
+  font-weight:bold;
+  text-decoration:none;
+  cursor:pointer
+}
+
+.product-list-button:hover{
+  opacity:.85
 }
 
 .container{
@@ -56,6 +99,13 @@ header p{
   color:#ccc
 }
 
+/* PRODUCT LIST TITLE */
+.product-title{
+  text-align:center;
+  font-size:26px;
+  margin:35px 0 20px
+}
+
 .products{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
@@ -74,6 +124,13 @@ header p{
   margin-bottom:12px
 }
 
+.description{
+  color:#aaa;
+  font-size:14px;
+  line-height:1.6;
+  margin:12px 0
+}
+
 /* STOCK */
 .stock{
   display:inline-block;
@@ -84,6 +141,20 @@ header p{
 }
 
 .stock::before{
+  content:"●";
+  margin-right:6px
+}
+
+/* OUT OF STOCK */
+.out-stock{
+  display:inline-block;
+  color:#ff6b6b;
+  font-size:14px;
+  font-weight:bold;
+  margin-bottom:10px
+}
+
+.out-stock::before{
   content:"●";
   margin-right:6px
 }
@@ -114,6 +185,12 @@ button{
 
 button:hover{
   opacity:.85
+}
+
+.order-disabled{
+  background:#222;
+  color:#777;
+  cursor:not-allowed
 }
 
 .modal{
@@ -189,10 +266,45 @@ input:focus{
   color:#ff9999
 }
 
+/* SOCIAL MEDIA */
+.social{
+  text-align:center;
+  padding:35px 20px 15px;
+  margin-top:30px;
+  border-top:1px solid #222
+}
+
+.social h2{
+  font-size:20px;
+  margin-bottom:18px
+}
+
+.social-links{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap
+}
+
+.social-links a{
+  display:inline-block;
+  text-decoration:none;
+  background:#111;
+  border:1px solid #333;
+  color:#fff;
+  padding:12px 22px;
+  border-radius:10px;
+  font-weight:bold
+}
+
+.social-links a:hover{
+  background:#222
+}
+
 footer{
   text-align:center;
   color:#666;
-  padding:35px 10px
+  padding:25px 10px 35px
 }
 </style>
 </head>
@@ -204,9 +316,27 @@ footer{
   <p>Editing Store</p>
 </header>
 
+
+<!-- WELCOME SECTION -->
+<section class="welcome">
+
+  <h2>Welcome to PRIMEX-ZONE</h2>
+
+  <p>
+    Explore our digital products and creative editing services.
+  </p>
+
+  <a href="#productList" class="product-list-button">
+    View Product List
+  </a>
+
+</section>
+
+
 <div class="container">
 
 <div class="info">
+
 <h2>Hello!</h2>
 
 <p>We Have:</p>
@@ -229,16 +359,23 @@ footer{
 Email: rahatexe52@gmail.com<br>
 WhatsApp: 01606873660
 </p>
+
 </div>
 
+
+<!-- PRODUCT LIST -->
+<h2 class="product-title" id="productList">
+  Product List
+</h2>
+
 <div class="products">
+
 
 <!-- PRODUCT 1 -->
 <div class="product">
 
 <h2>Premium AM Shake XML</h2>
 
-<!-- STOCK STATUS -->
 <div class="stock">In Stock</div>
 
 <div class="old">Price: 299 BDT</div>
@@ -257,7 +394,6 @@ Order Now
 
 <h2>Web HTML (Customizable)</h2>
 
-<!-- STOCK STATUS -->
 <div class="stock">In Stock</div>
 
 <div class="old">Price: 199 BDT</div>
@@ -269,6 +405,33 @@ Order Now
 </button>
 
 </div>
+
+
+<!-- PRODUCT 3 -->
+<div class="product">
+
+<h2>Customisable Edit</h2>
+
+<div class="out-stock">Out Of Stock</div>
+
+<div class="sale">99 BDT</div>
+
+<div class="description">
+
+Customizable Edit Example: Mixtape Edit, Manga Edit, Anime Edit, Football Edit etc.
+
+<br><br>
+
+*CapCut And Alight Motion Edit only.
+
+</div>
+
+<button class="order-disabled" disabled>
+Out Of Stock
+</button>
+
+</div>
+
 
 </div>
 </div>
@@ -334,19 +497,50 @@ Cancel
 
 </form>
 
+
 <div class="success" id="successMessage">
-Order sent successfully! ✅
+Your order has been submitted successfully! ✅
 </div>
+
 
 <div class="error" id="errorMessage">
 Order could not be sent. Please try again.
 </div>
+
 
 <div class="note">
 Your order information will be sent to our email.
 </div>
 
 </div>
+</div>
+
+
+<!-- SOCIAL MEDIA -->
+<div class="social">
+
+<h2>Follow Us</h2>
+
+<div class="social-links">
+
+<a
+  href="https://www.tiktok.com/@primex_67"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+TikTok
+</a>
+
+<a
+  href="https://t.me/rahatgamingt"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+Telegram
+</a>
+
+</div>
+
 </div>
 
 
