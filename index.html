@@ -10,31 +10,190 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#050505;color:#fff;font-family:Arial,sans-serif}
-header{text-align:center;padding:30px 15px;border-bottom:1px solid #222}
-header h1{font-size:32px;letter-spacing:3px}
-header p{color:#888;margin-top:8px}
-.container{max-width:950px;margin:auto;padding:20px}
-.info{background:#0d0d0d;border:1px solid #252525;border-radius:16px;padding:22px;line-height:1.8;margin-bottom:22px}
-.info h2{margin-bottom:10px}
-.info p{color:#ccc}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
-.product{background:#0d0d0d;border:1px solid #292929;border-radius:16px;padding:20px}
-.product h2{font-size:21px;margin-bottom:15px}
-.old{color:#777;text-decoration:line-through;font-size:15px}
-.sale{font-size:24px;font-weight:bold;margin-top:5px}
-button{width:100%;border:none;border-radius:10px;padding:14px;margin-top:18px;background:#fff;color:#000;font-weight:bold;cursor:pointer}
-button:hover{opacity:.85}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);justify-content:center;align-items:center;padding:20px;z-index:999}
-.box{width:100%;max-width:450px;background:#111;border:1px solid #333;border-radius:16px;padding:22px}
-.box h2{margin-bottom:15px}
-input{width:100%;padding:14px;margin-bottom:12px;background:#050505;color:#fff;border:1px solid #333;border-radius:9px;outline:none}
-input:focus{border-color:#fff}
-.cancel{background:#222;color:#fff}
-.note{color:#777;font-size:13px;margin-top:12px;line-height:1.5}
-.success{display:none;text-align:center;padding:15px;margin-top:15px;background:#102010;border:1px solid #245224;border-radius:10px;color:#8cff8c}
-.error{display:none;text-align:center;padding:15px;margin-top:15px;background:#200f0f;border:1px solid #522424;border-radius:10px;color:#ff9999}
-footer{text-align:center;color:#666;padding:35px 10px}
+
+body{
+  background:#050505;
+  color:#fff;
+  font-family:Arial,sans-serif
+}
+
+header{
+  text-align:center;
+  padding:30px 15px;
+  border-bottom:1px solid #222
+}
+
+header h1{
+  font-size:32px;
+  letter-spacing:3px
+}
+
+header p{
+  color:#888;
+  margin-top:8px
+}
+
+.container{
+  max-width:950px;
+  margin:auto;
+  padding:20px
+}
+
+.info{
+  background:#0d0d0d;
+  border:1px solid #252525;
+  border-radius:16px;
+  padding:22px;
+  line-height:1.8;
+  margin-bottom:22px
+}
+
+.info h2{
+  margin-bottom:10px
+}
+
+.info p{
+  color:#ccc
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:18px
+}
+
+.product{
+  background:#0d0d0d;
+  border:1px solid #292929;
+  border-radius:16px;
+  padding:20px
+}
+
+.product h2{
+  font-size:21px;
+  margin-bottom:12px
+}
+
+/* STOCK */
+.stock{
+  display:inline-block;
+  color:#65ff65;
+  font-size:14px;
+  font-weight:bold;
+  margin-bottom:10px
+}
+
+.stock::before{
+  content:"●";
+  margin-right:6px
+}
+
+.old{
+  color:#777;
+  text-decoration:line-through;
+  font-size:15px
+}
+
+.sale{
+  font-size:24px;
+  font-weight:bold;
+  margin-top:5px
+}
+
+button{
+  width:100%;
+  border:none;
+  border-radius:10px;
+  padding:14px;
+  margin-top:18px;
+  background:#fff;
+  color:#000;
+  font-weight:bold;
+  cursor:pointer
+}
+
+button:hover{
+  opacity:.85
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  z-index:999
+}
+
+.box{
+  width:100%;
+  max-width:450px;
+  background:#111;
+  border:1px solid #333;
+  border-radius:16px;
+  padding:22px
+}
+
+.box h2{
+  margin-bottom:15px
+}
+
+input{
+  width:100%;
+  padding:14px;
+  margin-bottom:12px;
+  background:#050505;
+  color:#fff;
+  border:1px solid #333;
+  border-radius:9px;
+  outline:none
+}
+
+input:focus{
+  border-color:#fff
+}
+
+.cancel{
+  background:#222;
+  color:#fff
+}
+
+.note{
+  color:#777;
+  font-size:13px;
+  margin-top:12px;
+  line-height:1.5
+}
+
+.success{
+  display:none;
+  text-align:center;
+  padding:15px;
+  margin-top:15px;
+  background:#102010;
+  border:1px solid #245224;
+  border-radius:10px;
+  color:#8cff8c
+}
+
+.error{
+  display:none;
+  text-align:center;
+  padding:15px;
+  margin-top:15px;
+  background:#200f0f;
+  border:1px solid #522424;
+  border-radius:10px;
+  color:#ff9999
+}
+
+footer{
+  text-align:center;
+  color:#666;
+  padding:35px 10px
+}
 </style>
 </head>
 
@@ -49,7 +208,9 @@ footer{text-align:center;color:#666;padding:35px 10px}
 
 <div class="info">
 <h2>Hello!</h2>
+
 <p>We Have:</p>
+
 <p>
 #Web HTML (Customizable)<br>
 #Editing Pack! (Only Alight Motion and CapCut)<br>
@@ -60,7 +221,9 @@ footer{text-align:center;color:#666;padding:35px 10px}
 #Edit Intro etc! 🔥<br>
 #FPS Method Tutorials
 </p>
+
 <br>
+
 <p>
 <strong>Contact Us For Others Information!</strong><br>
 Email: rahatexe52@gmail.com
@@ -69,48 +232,130 @@ Email: rahatexe52@gmail.com
 
 <div class="products">
 
+<!-- PRODUCT 1 -->
 <div class="product">
+
 <h2>Premium AM Shake XML</h2>
+
+<!-- STOCK STATUS -->
+<div class="stock">In Stock</div>
+
 <div class="old">Price: 299 BDT</div>
+
 <div class="sale">Sale Price: 199 BDT</div>
-<button onclick="openOrder('Premium AM Shake XML','199 BDT')">Order Now</button>
+
+<button onclick="openOrder('Premium AM Shake XML','199 BDT')">
+Order Now
+</button>
+
 </div>
 
+
+<!-- PRODUCT 2 -->
 <div class="product">
+
 <h2>Web HTML (Customizable)</h2>
+
+<!-- STOCK STATUS -->
+<div class="stock">In Stock</div>
+
 <div class="old">Price: 199 BDT</div>
+
 <div class="sale">Sale Price: 99 BDT</div>
-<button onclick="openOrder('Web HTML (Customizable)','99 BDT')">Order Now</button>
+
+<button onclick="openOrder('Web HTML (Customizable)','99 BDT')">
+Order Now
+</button>
+
 </div>
 
 </div>
 </div>
 
+
+<!-- ORDER MODAL -->
 <div class="modal" id="orderModal">
+
 <div class="box">
+
 <h2>Place Order</h2>
 
 <form onsubmit="sendOrder(event)">
-<input type="text" id="name" placeholder="Name" required>
-<input type="text" id="whatsapp" placeholder="WhatsApp Number" required>
-<input type="number" id="quantity" placeholder="Quantity" min="1" value="1" required>
-<input type="text" id="product" placeholder="Product" readonly>
-<input type="text" id="price" placeholder="Price" readonly>
 
-<button type="submit" id="submitButton">Place Order</button>
-<button type="button" class="cancel" onclick="closeOrder()">Cancel</button>
+<input
+  type="text"
+  id="name"
+  placeholder="Name"
+  required
+>
+
+<input
+  type="text"
+  id="whatsapp"
+  placeholder="WhatsApp Number"
+  required
+>
+
+<input
+  type="number"
+  id="quantity"
+  placeholder="Quantity"
+  min="1"
+  value="1"
+  required
+>
+
+<input
+  type="text"
+  id="product"
+  placeholder="Product"
+  readonly
+>
+
+<input
+  type="text"
+  id="price"
+  placeholder="Price"
+  readonly
+>
+
+<button type="submit" id="submitButton">
+Place Order
+</button>
+
+<button
+  type="button"
+  class="cancel"
+  onclick="closeOrder()"
+>
+Cancel
+</button>
+
 </form>
 
-<div class="success" id="successMessage">Order sent successfully! ✅</div>
-<div class="error" id="errorMessage">Order could not be sent. Please try again.</div>
+<div class="success" id="successMessage">
+Order sent successfully! ✅
+</div>
 
-<div class="note">Your order information will be sent to our email.</div>
+<div class="error" id="errorMessage">
+Order could not be sent. Please try again.
+</div>
+
+<div class="note">
+Your order information will be sent to our email.
+</div>
+
 </div>
 </div>
 
-<footer>© 2026 PRIMEX-ZONE</footer>
+
+<footer>
+© 2026 PRIMEX-ZONE
+</footer>
+
 
 <script>
+
 /* =========================================
    EMAILJS SETTINGS
    ========================================= */
@@ -123,63 +368,130 @@ emailjs.init({
   publicKey: EMAILJS_PUBLIC_KEY
 });
 
+
+/* =========================================
+   OPEN ORDER
+   ========================================= */
+
 function openOrder(product, price){
+
   document.getElementById("product").value = product;
+
   document.getElementById("price").value = price;
+
   document.getElementById("orderModal").style.display = "flex";
+
   document.getElementById("successMessage").style.display = "none";
+
   document.getElementById("errorMessage").style.display = "none";
 }
 
+
+/* =========================================
+   CLOSE ORDER
+   ========================================= */
+
 function closeOrder(){
+
   document.getElementById("orderModal").style.display = "none";
+
 }
 
+
+/* =========================================
+   SEND ORDER
+   ========================================= */
+
 function sendOrder(event){
+
   event.preventDefault();
 
   const button = document.getElementById("submitButton");
 
   const templateParams = {
-    customer_name: document.getElementById("name").value,
-    customer_whatsapp: document.getElementById("whatsapp").value,
-    product_name: document.getElementById("product").value,
-    product_price: document.getElementById("price").value,
-    quantity: document.getElementById("quantity").value,
-    order_date: new Date().toLocaleString("en-BD")
+
+    customer_name:
+      document.getElementById("name").value,
+
+    customer_whatsapp:
+      document.getElementById("whatsapp").value,
+
+    product_name:
+      document.getElementById("product").value,
+
+    product_price:
+      document.getElementById("price").value,
+
+    quantity:
+      document.getElementById("quantity").value,
+
+    order_date:
+      new Date().toLocaleString("en-BD")
+
   };
 
+
   button.disabled = true;
+
   button.innerText = "Sending...";
 
+
   emailjs.send(
+
     EMAILJS_SERVICE_ID,
+
     EMAILJS_TEMPLATE_ID,
+
     templateParams
+
   )
+
   .then(function(response){
-    console.log("SUCCESS!", response.status, response.text);
+
+    console.log(
+      "SUCCESS!",
+      response.status,
+      response.text
+    );
+
 
     document.getElementById("successMessage").style.display = "block";
+
     document.getElementById("errorMessage").style.display = "none";
 
+
     document.getElementById("name").value = "";
+
     document.getElementById("whatsapp").value = "";
+
     document.getElementById("quantity").value = "1";
 
+
     button.disabled = false;
+
     button.innerText = "Place Order";
+
   })
+
+
   .catch(function(error){
+
     console.log("FAILED...", error);
 
+
     document.getElementById("successMessage").style.display = "none";
+
     document.getElementById("errorMessage").style.display = "block";
 
+
     button.disabled = false;
+
     button.innerText = "Place Order";
+
   });
+
 }
+
 </script>
 
 </body>
