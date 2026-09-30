@@ -5,150 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PRIMEX-ZONE</title>
 
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-body{
-  background:#050505;
-  color:#fff;
-  font-family:Arial,sans-serif;
-}
-
-header{
-  text-align:center;
-  padding:30px 15px;
-  border-bottom:1px solid #222;
-}
-
-header h1{
-  font-size:32px;
-  letter-spacing:3px;
-}
-
-header p{
-  color:#888;
-  margin-top:8px;
-}
-
-.container{
-  max-width:950px;
-  margin:auto;
-  padding:20px;
-}
-
-.info{
-  background:#0d0d0d;
-  border:1px solid #252525;
-  border-radius:16px;
-  padding:22px;
-  line-height:1.8;
-  margin-bottom:22px;
-}
-
-.info h2{
-  margin-bottom:10px;
-}
-
-.info p{
-  color:#ccc;
-}
-
-.products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-  gap:18px;
-}
-
-.product{
-  background:#0d0d0d;
-  border:1px solid #292929;
-  border-radius:16px;
-  padding:20px;
-}
-
-.product h2{
-  font-size:21px;
-  margin-bottom:15px;
-}
-
-.old{
-  color:#777;
-  text-decoration:line-through;
-  font-size:15px;
-}
-
-.sale{
-  font-size:24px;
-  font-weight:bold;
-  margin-top:5px;
-}
-
-button{
-  width:100%;
-  border:none;
-  border-radius:10px;
-  padding:14px;
-  margin-top:18px;
-  background:#fff;
-  color:#000;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.85);
-  justify-content:center;
-  align-items:center;
-  padding:20px;
-}
-
-.box{
-  width:100%;
-  max-width:450px;
-  background:#111;
-  border:1px solid #333;
-  border-radius:16px;
-  padding:22px;
-}
-
-.box h2{
-  margin-bottom:15px;
-}
-
-input{
-  width:100%;
-  padding:14px;
-  margin-bottom:12px;
-  background:#050505;
-  color:#fff;
-  border:1px solid #333;
-  border-radius:9px;
-}
-
-.cancel{
-  background:#222;
-  color:#fff;
-}
-
-.note{
-  color:#777;
-  font-size:13px;
-  margin-top:12px;
-  line-height:1.5;
-}
-
-footer{
-  text-align:center;
-  color:#666;
-  padding:35px 10px;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#050505;color:#fff;font-family:Arial,sans-serif}
+header{text-align:center;padding:30px 15px;border-bottom:1px solid #222}
+header h1{font-size:32px;letter-spacing:3px}
+header p{color:#888;margin-top:8px}
+.container{max-width:950px;margin:auto;padding:20px}
+.info{background:#0d0d0d;border:1px solid #252525;border-radius:16px;padding:22px;line-height:1.8;margin-bottom:22px}
+.info h2{margin-bottom:10px}
+.info p{color:#ccc}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.product{background:#0d0d0d;border:1px solid #292929;border-radius:16px;padding:20px}
+.product h2{font-size:21px;margin-bottom:15px}
+.old{color:#777;text-decoration:line-through;font-size:15px}
+.sale{font-size:24px;font-weight:bold;margin-top:5px}
+button{width:100%;border:none;border-radius:10px;padding:14px;margin-top:18px;background:#fff;color:#000;font-weight:bold;cursor:pointer}
+button:hover{opacity:.85}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);justify-content:center;align-items:center;padding:20px;z-index:999}
+.box{width:100%;max-width:450px;background:#111;border:1px solid #333;border-radius:16px;padding:22px}
+.box h2{margin-bottom:15px}
+input{width:100%;padding:14px;margin-bottom:12px;background:#050505;color:#fff;border:1px solid #333;border-radius:9px;outline:none}
+input:focus{border-color:#fff}
+.cancel{background:#222;color:#fff}
+.note{color:#777;font-size:13px;margin-top:12px;line-height:1.5}
+.success{display:none;text-align:center;padding:15px;margin-top:15px;background:#102010;border:1px solid #245224;border-radius:10px;color:#8cff8c}
+.error{display:none;text-align:center;padding:15px;margin-top:15px;background:#200f0f;border:1px solid #522424;border-radius:10px;color:#ff9999}
+footer{text-align:center;color:#666;padding:35px 10px}
 </style>
 </head>
 
@@ -162,11 +48,8 @@ footer{
 <div class="container">
 
 <div class="info">
-
 <h2>Hello!</h2>
-
 <p>We Have:</p>
-
 <p>
 #Web HTML (Customizable)<br>
 #Editing Pack! (Only Alight Motion and CapCut)<br>
@@ -177,197 +60,126 @@ footer{
 #Edit Intro etc! 🔥<br>
 #FPS Method Tutorials
 </p>
-
 <br>
-
 <p>
 <strong>Contact Us For Others Information!</strong><br>
-WhatsApp: 01606873660 - WhatsApp (PRIMEX)
+Email: rahatexe52@gmail.com
 </p>
-
 </div>
-
 
 <div class="products">
 
-<!-- PRODUCT 1 -->
-
 <div class="product">
-
 <h2>Premium AM Shake XML</h2>
-
-<div class="old">
-Price: 299 BDT
+<div class="old">Price: 299 BDT</div>
+<div class="sale">Sale Price: 199 BDT</div>
+<button onclick="openOrder('Premium AM Shake XML','199 BDT')">Order Now</button>
 </div>
-
-<div class="sale">
-Sale Price: 199 BDT
-</div>
-
-<button onclick="openOrder('Premium AM Shake XML','199 BDT')">
-Order Now
-</button>
-
-</div>
-
-
-<!-- PRODUCT 2 -->
 
 <div class="product">
-
 <h2>Web HTML (Customizable)</h2>
-
-<div class="old">
-Price: 199 BDT
-</div>
-
-<div class="sale">
-Sale Price: 99 BDT
-</div>
-
-<button onclick="openOrder('Web HTML (Customizable)','99 BDT')">
-Order Now
-</button>
-
+<div class="old">Price: 199 BDT</div>
+<div class="sale">Sale Price: 99 BDT</div>
+<button onclick="openOrder('Web HTML (Customizable)','99 BDT')">Order Now</button>
 </div>
 
 </div>
-
 </div>
-
-
-<!-- ORDER FORM -->
 
 <div class="modal" id="orderModal">
-
 <div class="box">
-
 <h2>Place Order</h2>
 
 <form onsubmit="sendOrder(event)">
+<input type="text" id="name" placeholder="Name" required>
+<input type="text" id="whatsapp" placeholder="WhatsApp Number" required>
+<input type="number" id="quantity" placeholder="Quantity" min="1" value="1" required>
+<input type="text" id="product" placeholder="Product" readonly>
+<input type="text" id="price" placeholder="Price" readonly>
 
-<input
-  type="text"
-  id="name"
-  placeholder="Name"
-  required
->
-
-<input
-  type="text"
-  id="whatsapp"
-  placeholder="WhatsApp"
-  required
->
-
-<input
-  type="number"
-  id="quantity"
-  placeholder="Quantity"
-  min="1"
-  value="1"
-  required
->
-
-<input
-  type="text"
-  id="product"
-  readonly
->
-
-<input
-  type="text"
-  id="price"
-  readonly
->
-
-<button type="submit">
-Place Order
-</button>
-
-<button
-  type="button"
-  class="cancel"
-  onclick="closeOrder()">
-Cancel
-</button>
-
+<button type="submit" id="submitButton">Place Order</button>
+<button type="button" class="cancel" onclick="closeOrder()">Cancel</button>
 </form>
 
-<div class="note">
-After clicking Place Order, WhatsApp will open with your order information ready to send.
+<div class="success" id="successMessage">Order sent successfully! ✅</div>
+<div class="error" id="errorMessage">Order could not be sent. Please try again.</div>
+
+<div class="note">Your order information will be sent to our email.</div>
+</div>
 </div>
 
-</div>
-
-</div>
-
-
-<footer>
-© 2026 PRIMEX-ZONE
-</footer>
-
+<footer>© 2026 PRIMEX-ZONE</footer>
 
 <script>
+/* =========================================
+   EMAILJS SETTINGS
+   ========================================= */
 
-const SHOP_WHATSAPP = "8801606873660";
+const EMAILJS_PUBLIC_KEY = "7OLDMzyS7ISX39_H_";
+const EMAILJS_SERVICE_ID = "service_nax4ioi";
+const EMAILJS_TEMPLATE_ID = "template_9do9vgu";
 
-function openOrder(product,price){
+emailjs.init({
+  publicKey: EMAILJS_PUBLIC_KEY
+});
 
+function openOrder(product, price){
   document.getElementById("product").value = product;
   document.getElementById("price").value = price;
-
   document.getElementById("orderModal").style.display = "flex";
+  document.getElementById("successMessage").style.display = "none";
+  document.getElementById("errorMessage").style.display = "none";
 }
 
 function closeOrder(){
-
   document.getElementById("orderModal").style.display = "none";
-
 }
 
 function sendOrder(event){
-
   event.preventDefault();
 
-  const name =
-    document.getElementById("name").value;
+  const button = document.getElementById("submitButton");
 
-  const whatsapp =
-    document.getElementById("whatsapp").value;
+  const templateParams = {
+    customer_name: document.getElementById("name").value,
+    customer_whatsapp: document.getElementById("whatsapp").value,
+    product_name: document.getElementById("product").value,
+    product_price: document.getElementById("price").value,
+    quantity: document.getElementById("quantity").value,
+    order_date: new Date().toLocaleString("en-BD")
+  };
 
-  const quantity =
-    document.getElementById("quantity").value;
+  button.disabled = true;
+  button.innerText = "Sending...";
 
-  const product =
-    document.getElementById("product").value;
+  emailjs.send(
+    EMAILJS_SERVICE_ID,
+    EMAILJS_TEMPLATE_ID,
+    templateParams
+  )
+  .then(function(response){
+    console.log("SUCCESS!", response.status, response.text);
 
-  const price =
-    document.getElementById("price").value;
+    document.getElementById("successMessage").style.display = "block";
+    document.getElementById("errorMessage").style.display = "none";
 
+    document.getElementById("name").value = "";
+    document.getElementById("whatsapp").value = "";
+    document.getElementById("quantity").value = "1";
 
-  const message =
-`New Order 🛒
+    button.disabled = false;
+    button.innerText = "Place Order";
+  })
+  .catch(function(error){
+    console.log("FAILED...", error);
 
-Product: ${product}
-Price: ${price}
-Quantity: ${quantity}
+    document.getElementById("successMessage").style.display = "none";
+    document.getElementById("errorMessage").style.display = "block";
 
-Customer Name: ${name}
-Customer WhatsApp: ${whatsapp}`;
-
-
-  const url =
-    "https://wa.me/" +
-    SHOP_WHATSAPP +
-    "?text=" +
-    encodeURIComponent(message);
-
-
-  window.location.href = url;
-
+    button.disabled = false;
+    button.innerText = "Place Order";
+  });
 }
-
 </script>
 
 </body>
