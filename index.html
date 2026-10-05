@@ -1,634 +1,1372 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>PRIMEX-ZONE</title>
 
-<!-- EmailJS -->
+
+<!-- EMAILJS -->
+
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+
 <style>
+
+/* ================================
+   RESET
+================================ */
+
 *{
   box-sizing:border-box;
   margin:0;
-  padding:0
+  padding:0;
 }
 
-html{
-  scroll-behavior:smooth
-}
+
+/* ================================
+   BODY
+================================ */
 
 body{
-  background:#050505;
-  color:#fff;
-  font-family:Arial,sans-serif
+
+  background:#f6f7f3;
+
+  color:#172326;
+
+  font-family:
+  Arial,
+  Helvetica,
+  sans-serif;
+
+  min-height:100vh;
+
 }
+
+
+/* ================================
+   HEADER
+================================ */
 
 header{
+
   text-align:center;
-  padding:45px 15px 35px;
-  border-bottom:1px solid #222
+
+  padding:45px 20px 40px;
+
+  background:
+
+  radial-gradient(
+    circle at top,
+    rgba(42,180,185,.16),
+    transparent 55%
+  ),
+
+  #ffffff;
+
+  border-bottom:1px solid #e2e7e4;
+
 }
+
 
 header h1{
-  font-size:32px;
-  letter-spacing:3px
+
+  font-size:34px;
+
+  font-weight:800;
+
+  letter-spacing:4px;
+
+  color:#123f43;
+
 }
+
 
 header p{
-  color:#888;
-  margin-top:8px
-}
 
-/* WELCOME */
-.welcome{
-  text-align:center;
-  padding:55px 20px 35px
-}
+  margin-top:9px;
 
-.welcome h2{
-  font-size:30px;
-  margin-bottom:12px
-}
+  color:#718084;
 
-.welcome p{
-  color:#999;
   font-size:15px;
-  margin-bottom:22px
+
+  letter-spacing:1px;
+
 }
 
-.product-list-button{
-  display:inline-block;
-  width:auto;
-  padding:13px 24px;
-  margin-top:5px;
-  background:#fff;
-  color:#000;
-  border:none;
-  border-radius:10px;
-  font-weight:bold;
-  text-decoration:none;
-  cursor:pointer
-}
 
-.product-list-button:hover{
-  opacity:.85
-}
+/* ================================
+   MAIN CONTAINER
+================================ */
 
 .container{
-  max-width:950px;
+
+  max-width:1000px;
+
   margin:auto;
-  padding:20px
+
+  padding:25px 20px 40px;
+
 }
+
+
+/* ================================
+   INFO CARD
+================================ */
 
 .info{
-  background:#0d0d0d;
-  border:1px solid #252525;
-  border-radius:16px;
-  padding:22px;
-  line-height:1.8;
-  margin-bottom:22px
+
+  background:#ffffff;
+
+  border:1px solid #e0e7e4;
+
+  border-radius:22px;
+
+  padding:27px;
+
+  margin-bottom:25px;
+
+  box-shadow:
+  0 8px 30px rgba(18,63,67,.06);
+
 }
+
 
 .info h2{
-  margin-bottom:10px
+
+  font-size:26px;
+
+  color:#123f43;
+
+  margin-bottom:13px;
+
 }
+
 
 .info p{
-  color:#ccc
+
+  color:#566568;
+
+  line-height:1.85;
+
 }
 
-/* PRODUCT LIST TITLE */
-.product-title{
-  text-align:center;
-  font-size:26px;
-  margin:35px 0 20px
+
+.info strong{
+
+  color:#123f43;
+
 }
+
+
+/* ================================
+   PRODUCT GRID
+================================ */
 
 .products{
+
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-  gap:18px
+
+  grid-template-columns:
+  repeat(
+    auto-fit,
+    minmax(290px,1fr)
+  );
+
+  gap:22px;
+
 }
+
+
+/* ================================
+   PRODUCT CARD
+================================ */
 
 .product{
-  background:#0d0d0d;
-  border:1px solid #292929;
-  border-radius:16px;
-  padding:20px
+
+  position:relative;
+
+  background:#ffffff;
+
+  border:1px solid #dfe7e4;
+
+  border-radius:22px;
+
+  padding:24px;
+
+  overflow:hidden;
+
+  box-shadow:
+  0 10px 35px rgba(18,63,67,.07);
+
+  transition:
+  transform .2s ease,
+  box-shadow .2s ease;
+
 }
+
+
+.product::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:100%;
+
+  height:4px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #0f6f73,
+    #42c6c8
+  );
+
+}
+
+
+.product:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 15px 40px rgba(18,63,67,.11);
+
+}
+
 
 .product h2{
-  font-size:21px;
-  margin-bottom:12px
+
+  font-size:22px;
+
+  line-height:1.4;
+
+  margin-bottom:15px;
+
+  color:#172b2e;
+
 }
 
-.description{
-  color:#aaa;
-  font-size:14px;
-  line-height:1.6;
-  margin:12px 0
-}
 
-/* STOCK */
+/* ================================
+   STOCK
+================================ */
+
 .stock{
-  display:inline-block;
-  color:#65ff65;
-  font-size:14px;
-  font-weight:bold;
-  margin-bottom:10px
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:6px;
+
+  color:#11834a;
+
+  background:#eaf8f0;
+
+  border:1px solid #ccebd9;
+
+  border-radius:30px;
+
+  padding:7px 13px;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  margin-bottom:15px;
+
 }
+
 
 .stock::before{
+
   content:"●";
-  margin-right:6px
+
+  font-size:10px;
+
 }
 
-/* OUT OF STOCK */
-.out-stock{
-  display:inline-block;
-  color:#ff6b6b;
-  font-size:14px;
-  font-weight:bold;
-  margin-bottom:10px
+
+/* ================================
+   OUT OF STOCK
+================================ */
+
+.stock.out{
+
+  color:#d83a3a;
+
+  background:#fff0f0;
+
+  border-color:#f3cccc;
+
 }
 
-.out-stock::before{
+
+.stock.out::before{
+
   content:"●";
-  margin-right:6px
+
 }
+
+
+/* ================================
+   PRICE
+================================ */
 
 .old{
-  color:#777;
+
+  color:#929b9d;
+
   text-decoration:line-through;
-  font-size:15px
+
+  font-size:15px;
+
 }
+
 
 .sale{
-  font-size:24px;
-  font-weight:bold;
-  margin-top:5px
+
+  margin-top:5px;
+
+  font-size:28px;
+
+  font-weight:800;
+
+  color:#0f777b;
+
 }
+
+
+/* ================================
+   DETAILS
+================================ */
+
+.details{
+
+  margin-top:22px;
+
+  padding-top:20px;
+
+  border-top:1px solid #e8edeb;
+
+}
+
+
+.details-title{
+
+  display:inline-block;
+
+  font-size:21px;
+
+  font-weight:800;
+
+  color:#172b2e;
+
+  padding-bottom:6px;
+
+  border-bottom:
+
+  4px solid #42bfc2;
+
+  margin-bottom:14px;
+
+}
+
+
+.details ul{
+
+  padding-left:22px;
+
+  color:#59696c;
+
+  line-height:1.75;
+
+}
+
+
+.details li{
+
+  margin-bottom:6px;
+
+}
+
+
+/* ================================
+   ORDER BUTTON
+================================ */
 
 button{
+
   width:100%;
+
   border:none;
-  border-radius:10px;
-  padding:14px;
-  margin-top:18px;
-  background:#fff;
-  color:#000;
-  font-weight:bold;
-  cursor:pointer
+
+  border-radius:12px;
+
+  padding:15px;
+
+  margin-top:22px;
+
+  background:
+
+  linear-gradient(
+    135deg,
+    #0f6f73,
+    #24aeb3
+  );
+
+  color:#ffffff;
+
+  font-size:15px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  box-shadow:
+  0 7px 18px rgba(15,111,115,.20);
+
+  transition:.2s;
+
 }
+
 
 button:hover{
-  opacity:.85
+
+  transform:translateY(-1px);
+
+  opacity:.92;
+
 }
 
-.order-disabled{
-  background:#222;
+
+button:disabled{
+
+  background:#d8dddd;
+
   color:#777;
-  cursor:not-allowed
+
+  box-shadow:none;
+
+  cursor:not-allowed;
+
+  transform:none;
+
 }
+
+
+/* ================================
+   MODAL
+================================ */
 
 .modal{
+
   display:none;
+
   position:fixed;
+
   inset:0;
-  background:rgba(0,0,0,.85);
+
+  background:
+  rgba(10,25,27,.72);
+
+  backdrop-filter:blur(5px);
+
   justify-content:center;
+
   align-items:center;
+
   padding:20px;
-  z-index:999
+
+  z-index:9999;
+
 }
+
+
+/* ================================
+   ORDER BOX
+================================ */
 
 .box{
+
   width:100%;
+
   max-width:450px;
-  background:#111;
-  border:1px solid #333;
-  border-radius:16px;
-  padding:22px
+
+  background:#ffffff;
+
+  border-radius:22px;
+
+  padding:25px;
+
+  box-shadow:
+  0 20px 70px rgba(0,0,0,.25);
+
 }
+
 
 .box h2{
-  margin-bottom:15px
+
+  color:#123f43;
+
+  margin-bottom:18px;
+
+  font-size:25px;
+
 }
+
+
+/* ================================
+   INPUT
+================================ */
 
 input{
+
   width:100%;
+
   padding:14px;
+
   margin-bottom:12px;
-  background:#050505;
-  color:#fff;
-  border:1px solid #333;
-  border-radius:9px;
-  outline:none
+
+  background:#f7f9f8;
+
+  color:#172326;
+
+  border:1px solid #d8e0dd;
+
+  border-radius:10px;
+
+  outline:none;
+
+  font-size:15px;
+
 }
+
 
 input:focus{
-  border-color:#fff
+
+  border-color:#20a5aa;
+
+  box-shadow:
+  0 0 0 3px rgba(32,165,170,.10);
+
 }
+
+
+input[readonly]{
+
+  background:#eef2f1;
+
+  color:#526063;
+
+}
+
+
+/* ================================
+   CANCEL BUTTON
+================================ */
 
 .cancel{
-  background:#222;
-  color:#fff
+
+  background:#edf0ef;
+
+  color:#263537;
+
+  box-shadow:none;
+
 }
 
-.note{
-  color:#777;
-  font-size:13px;
-  margin-top:12px;
-  line-height:1.5
-}
+
+/* ================================
+   SUCCESS
+================================ */
 
 .success{
+
   display:none;
+
   text-align:center;
-  padding:15px;
+
+  padding:14px;
+
   margin-top:15px;
-  background:#102010;
-  border:1px solid #245224;
+
+  background:#eaf8f0;
+
+  border:1px solid #c6e9d4;
+
   border-radius:10px;
-  color:#8cff8c
+
+  color:#158046;
+
+  font-weight:600;
+
 }
+
+
+/* ================================
+   ERROR
+================================ */
 
 .error{
+
   display:none;
+
   text-align:center;
-  padding:15px;
+
+  padding:14px;
+
   margin-top:15px;
-  background:#200f0f;
-  border:1px solid #522424;
+
+  background:#fff0f0;
+
+  border:1px solid #f1caca;
+
   border-radius:10px;
-  color:#ff9999
+
+  color:#d73535;
+
+  font-weight:600;
+
 }
 
-/* SOCIAL MEDIA */
-.social{
+
+/* ================================
+   NOTE
+================================ */
+
+.note{
+
+  color:#7b8587;
+
+  font-size:13px;
+
+  margin-top:13px;
+
+  line-height:1.5;
+
   text-align:center;
-  padding:35px 20px 15px;
-  margin-top:30px;
-  border-top:1px solid #222
+
 }
 
-.social h2{
-  font-size:20px;
-  margin-bottom:18px
-}
 
-.social-links{
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap
-}
-
-.social-links a{
-  display:inline-block;
-  text-decoration:none;
-  background:#111;
-  border:1px solid #333;
-  color:#fff;
-  padding:12px 22px;
-  border-radius:10px;
-  font-weight:bold
-}
-
-.social-links a:hover{
-  background:#222
-}
+/* ================================
+   FOOTER
+================================ */
 
 footer{
+
   text-align:center;
-  color:#666;
-  padding:25px 10px 35px
+
+  color:#7b8587;
+
+  padding:35px 15px;
+
+  border-top:1px solid #e2e7e4;
+
+  background:#ffffff;
+
+  font-size:14px;
+
 }
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:600px){
+
+  header{
+
+    padding:35px 15px;
+
+  }
+
+
+  header h1{
+
+    font-size:28px;
+
+    letter-spacing:3px;
+
+  }
+
+
+  .container{
+
+    padding:18px 14px 35px;
+
+  }
+
+
+  .info{
+
+    padding:21px;
+
+    border-radius:18px;
+
+  }
+
+
+  .product{
+
+    padding:21px;
+
+    border-radius:19px;
+
+  }
+
+
+  .product h2{
+
+    font-size:20px;
+
+  }
+
+
+  .sale{
+
+    font-size:26px;
+
+  }
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- ================================
+     HEADER
+================================ -->
+
 <header>
-  <h1>PRIMEX-ZONE</h1>
-  <p>Editing Store</p>
+
+<h1>PRIMEX-ZONE</h1>
+
+<p>Premium Editing Store</p>
+
 </header>
 
 
-<!-- WELCOME SECTION -->
-<section class="welcome">
 
-  <h2>Welcome to PRIMEX-ZONE</h2>
-
-  <p>
-    Explore our digital products and creative editing services.
-  </p>
-
-  <a href="#productList" class="product-list-button">
-    View Product List
-  </a>
-
-</section>
-
+<!-- ================================
+     MAIN
+================================ -->
 
 <div class="container">
 
+
+<!-- ================================
+     INFORMATION
+================================ -->
+
 <div class="info">
 
-<h2>Hello!</h2>
-
-<p>We Have:</p>
+<h2>Hello! 👋</h2>
 
 <p>
-#Web HTML (Customizable)<br>
-#Editing Pack! (Only Alight Motion and CapCut)<br>
-#Alight Motion Shake, Transitions, Mograph - XML, QR, Tutorial!<br>
-#CapCut Shake Tutorials!<br>
-#Trending Edits Idea!<br>
-#4K MP4 TikTok, YouTube Clips!<br>
-#Edit Intro etc! 🔥<br>
-#FPS Method Tutorials
+
+We Have:
+
+</p>
+
+<p>
+
+# Web HTML (Customizable)<br>
+
+# Editing Pack! (Only Alight Motion and CapCut)<br>
+
+# Alight Motion Shake, Transitions, Mograph - XML, QR, Tutorial!<br>
+
+# CapCut Shake Tutorials!<br>
+
+# Trending Edits Idea!<br>
+
+# 4K MP4 TikTok, YouTube Clips!<br>
+
+# Edit Intro etc! 🔥<br>
+
+# FPS Method Tutorials
+
 </p>
 
 <br>
 
 <p>
-<strong>Contact Us For Others Information!</strong><br>
-Email: rahatexe52@gmail.com<br>
-WhatsApp: 01606873660
+
+<strong>
+Contact Us For Others Information!
+</strong>
+
+<br>
+
+Email:
+rahatexe52@gmail.com
+
+<br>
+
+WhatsApp:
+01606873660
+
 </p>
 
 </div>
 
 
-<!-- PRODUCT LIST -->
-<h2 class="product-title" id="productList">
-  Product List
-</h2>
+
+<!-- ================================
+     PRODUCTS
+================================ -->
 
 <div class="products">
 
 
+
 <!-- PRODUCT 1 -->
+
 <div class="product">
 
-<h2>Premium AM Shake XML</h2>
 
-<div class="stock">In Stock</div>
+<h2>
+Premium AM Shake XML
+</h2>
 
-<div class="old">Price: 299 BDT</div>
 
-<div class="sale">Sale Price: 199 BDT</div>
+<div class="stock">
+In Stock
+</div>
 
-<button onclick="openOrder('Premium AM Shake XML','199 BDT')">
-Order Now
-</button>
+
+<div class="old">
+Price: 299 BDT
+</div>
+
+
+<div class="sale">
+Sale Price: 199 BDT
+</div>
+
+
+
+<div class="details">
+
+
+<div class="details-title">
+Details
+</div>
+
+
+<ul>
+
+<li>
+Premium Alight Motion Shake XML
+</li>
+
+<li>
+Smooth and high quality shake
+</li>
+
+<li>
+Easy to import and use
+</li>
+
+<li>
+Suitable for anime and velocity edits
+</li>
+
+<li>
+Works with Alight Motion
+</li>
+
+</ul>
+
 
 </div>
+
+
+
+<button
+onclick="openOrder(
+'Premium AM Shake XML',
+'199 BDT'
+)"
+>
+
+Order Now
+
+</button>
+
+
+</div>
+
 
 
 <!-- PRODUCT 2 -->
+
 <div class="product">
 
-<h2>Web HTML (Customizable)</h2>
 
-<div class="stock">In Stock</div>
+<h2>
+Web HTML (Customizable)
+</h2>
 
-<div class="old">Price: 199 BDT</div>
 
-<div class="sale">Sale Price: 99 BDT</div>
+<div class="stock">
+In Stock
+</div>
 
-<button onclick="openOrder('Web HTML (Customizable)','99 BDT')">
+
+<div class="old">
+Price: 199 BDT
+</div>
+
+
+<div class="sale">
+Sale Price: 99 BDT
+</div>
+
+
+
+<div class="details">
+
+
+<div class="details-title">
+Details
+</div>
+
+
+<ul>
+
+<li>
+Fully customizable HTML website
+</li>
+
+<li>
+Easy to edit text and information
+</li>
+
+<li>
+Mobile responsive design
+</li>
+
+<li>
+Clean and modern design
+</li>
+
+<li>
+Suitable for personal or editing stores
+</li>
+
+</ul>
+
+
+</div>
+
+
+
+<button
+onclick="openOrder(
+'Web HTML (Customizable)',
+'99 BDT'
+)"
+>
+
 Order Now
+
 </button>
 
-</div>
-
-
-<!-- PRODUCT 3 -->
-<div class="product">
-
-<h2>Customisable Edit</h2>
-
-<div class="out-stock">Out Of Stock</div>
-
-<div class="sale">99 BDT</div>
-
-<div class="description">
-
-Customizable Edit Example: Mixtape Edit, Manga Edit, Anime Edit, Football Edit etc.
-
-<br><br>
-
-*CapCut And Alight Motion Edit only.
-
-</div>
-
-<button class="order-disabled" disabled>
-Out Of Stock
-</button>
 
 </div>
 
 
+
 </div>
+
 </div>
 
 
-<!-- ORDER MODAL -->
-<div class="modal" id="orderModal">
+
+<!-- ================================
+     ORDER MODAL
+================================ -->
+
+<div
+class="modal"
+id="orderModal"
+>
+
 
 <div class="box">
 
-<h2>Place Order</h2>
 
-<form onsubmit="sendOrder(event)">
-
-<input
-  type="text"
-  id="name"
-  placeholder="Name"
-  required
->
-
-<input
-  type="text"
-  id="whatsapp"
-  placeholder="WhatsApp Number"
-  required
->
-
-<input
-  type="number"
-  id="quantity"
-  placeholder="Quantity"
-  min="1"
-  value="1"
-  required
->
-
-<input
-  type="text"
-  id="product"
-  placeholder="Product"
-  readonly
->
-
-<input
-  type="text"
-  id="price"
-  placeholder="Price"
-  readonly
->
-
-<button type="submit" id="submitButton">
+<h2>
 Place Order
-</button>
+</h2>
+
+
+
+<form
+onsubmit="sendOrder(event)"
+>
+
+
+<!-- NAME -->
+
+<input
+type="text"
+id="name"
+placeholder="Name"
+required
+>
+
+
+
+<!-- WHATSAPP -->
+
+<input
+type="tel"
+id="whatsapp"
+placeholder="WhatsApp Number"
+maxlength="11"
+inputmode="numeric"
+required
+>
+
+
+
+<!-- QUANTITY -->
+
+<input
+type="number"
+id="quantity"
+placeholder="Quantity"
+min="1"
+value="1"
+required
+>
+
+
+
+<!-- PRODUCT -->
+
+<input
+type="text"
+id="product"
+placeholder="Product"
+readonly
+>
+
+
+
+<!-- PRICE -->
+
+<input
+type="text"
+id="price"
+placeholder="Price"
+readonly
+>
+
+
+
+<!-- SUBMIT -->
 
 <button
-  type="button"
-  class="cancel"
-  onclick="closeOrder()"
+type="submit"
+id="submitButton"
 >
-Cancel
+
+Place Order
+
 </button>
+
+
+
+<!-- CANCEL -->
+
+<button
+type="button"
+class="cancel"
+onclick="closeOrder()"
+>
+
+Cancel
+
+</button>
+
 
 </form>
 
 
-<div class="success" id="successMessage">
-Your order has been submitted successfully! ✅
+
+<!-- SUCCESS -->
+
+<div
+class="success"
+id="successMessage"
+>
+
+Order sent successfully! ✅
+
 </div>
 
 
-<div class="error" id="errorMessage">
-Order could not be sent. Please try again.
+
+<!-- ERROR -->
+
+<div
+class="error"
+id="errorMessage"
+>
+
+Please enter a correct number.
+
 </div>
+
 
 
 <div class="note">
+
 Your order information will be sent to our email.
-</div>
 
 </div>
-</div>
 
-
-<!-- SOCIAL MEDIA -->
-<div class="social">
-
-<h2>Follow Us</h2>
-
-<div class="social-links">
-
-<a
-  href="https://www.tiktok.com/@primex_67"
-  target="_blank"
-  rel="noopener noreferrer"
->
-TikTok
-</a>
-
-<a
-  href="https://t.me/rahatgamingt"
-  target="_blank"
-  rel="noopener noreferrer"
->
-Telegram
-</a>
 
 </div>
 
 </div>
 
+
+
+<!-- ================================
+     FOOTER
+================================ -->
 
 <footer>
+
 © 2026 PRIMEX-ZONE
+
+<br>
+
+Created By Rahat
+
 </footer>
+
 
 
 <script>
 
 /* =========================================
    EMAILJS SETTINGS
-   ========================================= */
+========================================= */
 
-const EMAILJS_PUBLIC_KEY = "7OLDMzyS7ISX39_H_";
-const EMAILJS_SERVICE_ID = "service_nax4ioi";
-const EMAILJS_TEMPLATE_ID = "template_9do9vgu";
+const EMAILJS_PUBLIC_KEY =
+"7OLDMzyS7ISX39_H_";
+
+const EMAILJS_SERVICE_ID =
+"service_nax4ioi";
+
+const EMAILJS_TEMPLATE_ID =
+"template_9do9vgu";
+
 
 emailjs.init({
-  publicKey: EMAILJS_PUBLIC_KEY
+
+  publicKey:
+  EMAILJS_PUBLIC_KEY
+
 });
+
 
 
 /* =========================================
    OPEN ORDER
-   ========================================= */
+========================================= */
 
-function openOrder(product, price){
+function openOrder(product,price){
 
-  document.getElementById("product").value = product;
 
-  document.getElementById("price").value = price;
+  document.getElementById("product").value =
+  product;
 
-  document.getElementById("orderModal").style.display = "flex";
 
-  document.getElementById("successMessage").style.display = "none";
+  document.getElementById("price").value =
+  price;
 
-  document.getElementById("errorMessage").style.display = "none";
+
+  document.getElementById("orderModal").style.display =
+  "flex";
+
+
+  document.getElementById("successMessage").style.display =
+  "none";
+
+
+  document.getElementById("errorMessage").style.display =
+  "none";
+
+
 }
+
 
 
 /* =========================================
    CLOSE ORDER
-   ========================================= */
+========================================= */
 
 function closeOrder(){
 
-  document.getElementById("orderModal").style.display = "none";
+
+  document.getElementById("orderModal").style.display =
+  "none";
+
 
 }
 
 
+
 /* =========================================
    SEND ORDER
-   ========================================= */
+========================================= */
 
 function sendOrder(event){
 
+
   event.preventDefault();
 
-  const button = document.getElementById("submitButton");
+
+  const whatsapp =
+  document
+  .getElementById("whatsapp")
+  .value
+  .trim();
+
+
+
+  /*
+
+     NUMBER VALIDATION
+
+     01 + 9 digits
+     Total = 11 digits
+
+  */
+
+
+  if(!/^01[0-9]{9}$/.test(whatsapp)){
+
+
+    document.getElementById(
+      "errorMessage"
+    ).innerText =
+    "Please enter a correct number.";
+
+
+    document.getElementById(
+      "errorMessage"
+    ).style.display =
+    "block";
+
+
+    document.getElementById(
+      "successMessage"
+    ).style.display =
+    "none";
+
+
+    return;
+
+  }
+
+
+
+  /* =========================================
+     BUTTON
+  ========================================= */
+
+  const button =
+  document.getElementById(
+    "submitButton"
+  );
+
+
+
+  /* =========================================
+     TEMPLATE DATA
+  ========================================= */
 
   const templateParams = {
 
+
     customer_name:
-      document.getElementById("name").value,
+
+    document
+    .getElementById("name")
+    .value,
+
 
     customer_whatsapp:
-      document.getElementById("whatsapp").value,
+
+    whatsapp,
+
 
     product_name:
-      document.getElementById("product").value,
+
+    document
+    .getElementById("product")
+    .value,
+
 
     product_price:
-      document.getElementById("price").value,
+
+    document
+    .getElementById("price")
+    .value,
+
 
     quantity:
-      document.getElementById("quantity").value,
+
+    document
+    .getElementById("quantity")
+    .value,
+
 
     order_date:
-      new Date().toLocaleString("en-BD")
+
+    new Date()
+    .toLocaleString("en-BD")
+
 
   };
 
 
-  button.disabled = true;
 
-  button.innerText = "Sending...";
+  /* =========================================
+     SENDING
+  ========================================= */
+
+  button.disabled =
+  true;
+
+
+  button.innerText =
+  "Sending...";
+
 
 
   emailjs.send(
@@ -641,53 +1379,135 @@ function sendOrder(event){
 
   )
 
+
   .then(function(response){
 
+
     console.log(
+
       "SUCCESS!",
+
       response.status,
+
       response.text
+
     );
 
 
-    document.getElementById("successMessage").style.display = "block";
 
-    document.getElementById("errorMessage").style.display = "none";
-
-
-    document.getElementById("name").value = "";
-
-    document.getElementById("whatsapp").value = "";
-
-    document.getElementById("quantity").value = "1";
+    document.getElementById(
+      "successMessage"
+    ).innerText =
+    "Order sent successfully! ✅";
 
 
-    button.disabled = false;
+    document.getElementById(
+      "successMessage"
+    ).style.display =
+    "block";
 
-    button.innerText = "Place Order";
+
+    document.getElementById(
+      "errorMessage"
+    ).style.display =
+    "none";
+
+
+
+    document.getElementById(
+      "name"
+    ).value =
+    "";
+
+
+    document.getElementById(
+      "whatsapp"
+    ).value =
+    "";
+
+
+    document.getElementById(
+      "quantity"
+    ).value =
+    "1";
+
+
+
+    button.disabled =
+    false;
+
+
+    button.innerText =
+    "Place Order";
+
 
   })
 
 
   .catch(function(error){
 
-    console.log("FAILED...", error);
+
+    console.log(
+      "FAILED...",
+      error
+    );
 
 
-    document.getElementById("successMessage").style.display = "none";
+    document.getElementById(
+      "successMessage"
+    ).style.display =
+    "none";
 
-    document.getElementById("errorMessage").style.display = "block";
+
+    document.getElementById(
+      "errorMessage"
+    ).innerText =
+    "Order could not be sent. Please try again.";
 
 
-    button.disabled = false;
+    document.getElementById(
+      "errorMessage"
+    ).style.display =
+    "block";
 
-    button.innerText = "Place Order";
+
+    button.disabled =
+    false;
+
+
+    button.innerText =
+    "Place Order";
+
 
   });
 
+
 }
+
+
+
+/* =========================================
+   CLOSE MODAL BY CLICKING OUTSIDE
+========================================= */
+
+document
+.getElementById("orderModal")
+.addEventListener(
+  "click",
+  function(event){
+
+    if(event.target === this){
+
+      closeOrder();
+
+    }
+
+  }
+);
 
 </script>
 
+
 </body>
+
 </html>
