@@ -7,7 +7,42 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PRIMEX-ZONE</title>
+<title>PRIMEX-ZONE | Editing Store</title>
+
+<meta
+  name="description"
+  content="PRIMEX-ZONE Editing Store — Alight Motion XML, CapCut editing packs, tutorials, 4K MP4 clips and customizable HTML websites."
+>
+
+<meta name="author" content="PRIMEX-ZONE">
+
+<meta name="robots" content="index, follow">
+
+<meta
+  name="keywords"
+  content="PRIMEX-ZONE, PRIMEX ZONE, editing store, Alight Motion XML, CapCut, Mograph XML, editing pack, 4K clips, customizable HTML"
+>
+
+<link
+  rel="canonical"
+  href="https://rahatexe52-ops.github.io/Primex-Zone-/"
+>
+
+<meta property="og:type" content="website">
+
+<meta property="og:title" content="PRIMEX-ZONE | Editing Store">
+
+<meta
+  property="og:description"
+  content="Alight Motion XML, CapCut editing packs, tutorials, 4K clips and customizable HTML websites."
+>
+
+<meta
+  property="og:url"
+  content="https://rahatexe52-ops.github.io/Primex-Zone-/"
+>
+
+<meta property="og:site_name" content="PRIMEX-ZONE">
 
 
 <!-- EMAILJS -->
@@ -17,9 +52,9 @@
 
 <style>
 
-/* ================================
-   RESET
-================================ */
+/* =========================
+   GLOBAL
+========================= */
 
 *{
   box-sizing:border-box;
@@ -27,717 +62,398 @@
   padding:0;
 }
 
-
-/* ================================
-   BODY
-================================ */
-
 body{
-
-  background:#f6f7f3;
-
-  color:#172326;
-
-  font-family:
-  Arial,
-  Helvetica,
-  sans-serif;
-
-  min-height:100vh;
-
+  background:#f5f8fc;
+  color:#172033;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
 }
 
 
-/* ================================
+/* =========================
    HEADER
-================================ */
+========================= */
 
 header{
-
+  background:#fff;
   text-align:center;
-
-  padding:45px 20px 40px;
-
-  background:
-
-  radial-gradient(
-    circle at top,
-    rgba(42,180,185,.16),
-    transparent 55%
-  ),
-
-  #ffffff;
-
-  border-bottom:1px solid #e2e7e4;
-
+  padding:42px 18px 36px;
+  border-bottom:1px solid #e5eaf1;
 }
-
 
 header h1{
-
   font-size:34px;
-
+  letter-spacing:3px;
+  color:#172033;
   font-weight:800;
-
-  letter-spacing:4px;
-
-  color:#123f43;
-
 }
-
 
 header p{
-
-  margin-top:9px;
-
-  color:#718084;
-
+  color:#65728a;
+  margin-top:7px;
   font-size:15px;
-
-  letter-spacing:1px;
-
 }
 
 
-/* ================================
-   MAIN CONTAINER
-================================ */
+/* =========================
+   CONTAINER
+========================= */
 
 .container{
-
-  max-width:1000px;
-
+  max-width:1050px;
   margin:auto;
-
-  padding:25px 20px 40px;
-
+  padding:25px 18px 40px;
 }
 
 
-/* ================================
-   INFO CARD
-================================ */
+/* =========================
+   INFO
+========================= */
 
 .info{
-
-  background:#ffffff;
-
-  border:1px solid #e0e7e4;
-
-  border-radius:22px;
-
-  padding:27px;
-
-  margin-bottom:25px;
-
-  box-shadow:
-  0 8px 30px rgba(18,63,67,.06);
-
+  background:#fff;
+  border:1px solid #e3e9f1;
+  border-radius:18px;
+  padding:25px;
+  margin-bottom:28px;
+  box-shadow:0 8px 25px rgba(20,45,80,.06);
 }
-
 
 .info h2{
-
-  font-size:26px;
-
-  color:#123f43;
-
-  margin-bottom:13px;
-
+  color:#147d8d;
+  margin-bottom:12px;
+  font-size:25px;
 }
-
 
 .info p{
-
-  color:#566568;
-
+  color:#536174;
   line-height:1.85;
-
 }
-
 
 .info strong{
-
-  color:#123f43;
-
+  color:#172033;
 }
 
 
-/* ================================
-   PRODUCT GRID
-================================ */
+/* =========================
+   PRODUCTS
+========================= */
 
 .products{
-
   display:grid;
-
-  grid-template-columns:
-  repeat(
-    auto-fit,
-    minmax(290px,1fr)
-  );
-
+  grid-template-columns:repeat(auto-fit,minmax(285px,1fr));
   gap:22px;
-
 }
 
 
-/* ================================
+/* =========================
    PRODUCT CARD
-================================ */
+========================= */
 
 .product{
-
-  position:relative;
-
-  background:#ffffff;
-
-  border:1px solid #dfe7e4;
-
-  border-radius:22px;
-
-  padding:24px;
-
-  overflow:hidden;
-
-  box-shadow:
-  0 10px 35px rgba(18,63,67,.07);
-
-  transition:
-  transform .2s ease,
-  box-shadow .2s ease;
-
+  background:#fff;
+  border:1px solid #e1e7ef;
+  border-radius:20px;
+  padding:23px;
+  box-shadow:0 10px 30px rgba(20,45,80,.07);
+  transition:.25s ease;
 }
-
-
-.product::before{
-
-  content:"";
-
-  position:absolute;
-
-  top:0;
-  left:0;
-
-  width:100%;
-
-  height:4px;
-
-  background:
-  linear-gradient(
-    90deg,
-    #0f6f73,
-    #42c6c8
-  );
-
-}
-
 
 .product:hover{
-
   transform:translateY(-3px);
-
-  box-shadow:
-  0 15px 40px rgba(18,63,67,.11);
-
+  box-shadow:0 14px 35px rgba(20,45,80,.11);
 }
-
 
 .product h2{
-
   font-size:22px;
-
-  line-height:1.4;
-
-  margin-bottom:15px;
-
-  color:#172b2e;
-
+  color:#172033;
+  margin-bottom:13px;
+  line-height:1.35;
 }
 
 
-/* ================================
+/* =========================
    STOCK
-================================ */
+========================= */
 
 .stock{
-
   display:inline-flex;
-
   align-items:center;
-
-  gap:6px;
-
-  color:#11834a;
-
-  background:#eaf8f0;
-
-  border:1px solid #ccebd9;
-
+  gap:7px;
+  padding:6px 12px;
   border-radius:30px;
-
-  padding:7px 13px;
-
+  background:#e9faf4;
+  color:#07835c;
   font-size:13px;
-
-  font-weight:700;
-
+  font-weight:800;
   margin-bottom:15px;
-
 }
-
 
 .stock::before{
-
   content:"●";
-
   font-size:10px;
-
 }
 
 
-/* ================================
+/* =========================
    OUT OF STOCK
-================================ */
+========================= */
 
-.stock.out{
-
-  color:#d83a3a;
-
+.out-stock{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:7px 13px;
+  border-radius:30px;
   background:#fff0f0;
+  color:#d43838;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:15px;
+}
 
-  border-color:#f3cccc;
-
+.out-stock::before{
+  content:"✕";
+  font-size:12px;
 }
 
 
-.stock.out::before{
-
-  content:"●";
-
-}
-
-
-/* ================================
+/* =========================
    PRICE
-================================ */
+========================= */
 
 .old{
-
-  color:#929b9d;
-
+  color:#8994a5;
   text-decoration:line-through;
-
   font-size:15px;
-
 }
-
 
 .sale{
-
-  margin-top:5px;
-
-  font-size:28px;
-
+  color:#147d8d;
+  font-size:27px;
   font-weight:800;
-
-  color:#0f777b;
-
 }
 
 
-/* ================================
+/* =========================
    DETAILS
-================================ */
+========================= */
 
 .details{
-
-  margin-top:22px;
-
-  padding-top:20px;
-
-  border-top:1px solid #e8edeb;
-
+  margin-top:20px;
+  padding-top:18px;
+  border-top:1px solid #edf0f4;
 }
 
-
-.details-title{
-
-  display:inline-block;
-
-  font-size:21px;
-
-  font-weight:800;
-
-  color:#172b2e;
-
-  padding-bottom:6px;
-
-  border-bottom:
-
-  4px solid #42bfc2;
-
-  margin-bottom:14px;
-
+.details h3{
+  font-size:17px;
+  color:#172033;
+  margin-bottom:10px;
 }
-
 
 .details ul{
-
-  padding-left:22px;
-
-  color:#59696c;
-
-  line-height:1.75;
-
+  padding-left:20px;
+  color:#5d697b;
 }
-
 
 .details li{
-
   margin-bottom:6px;
-
+  font-size:14px;
 }
 
 
-/* ================================
-   ORDER BUTTON
-================================ */
+/* =========================
+   BUTTON
+========================= */
 
 button{
-
   width:100%;
-
   border:none;
-
-  border-radius:12px;
-
-  padding:15px;
-
-  margin-top:22px;
-
-  background:
-
-  linear-gradient(
-    135deg,
-    #0f6f73,
-    #24aeb3
-  );
-
-  color:#ffffff;
-
+  border-radius:11px;
+  padding:14px;
+  margin-top:20px;
+  background:#147d8d;
+  color:#fff;
+  font-weight:800;
   font-size:15px;
-
-  font-weight:700;
-
   cursor:pointer;
-
-  box-shadow:
-  0 7px 18px rgba(15,111,115,.20);
-
   transition:.2s;
-
 }
-
 
 button:hover{
-
-  transform:translateY(-1px);
-
-  opacity:.92;
-
+  background:#0e6573;
 }
-
 
 button:disabled{
-
-  background:#d8dddd;
-
-  color:#777;
-
-  box-shadow:none;
-
   cursor:not-allowed;
+  opacity:.65;
+}
 
-  transform:none;
-
+.out-button{
+  background:#e9edf2 !important;
+  color:#8993a1 !important;
+  cursor:not-allowed !important;
 }
 
 
-/* ================================
+/* =========================
    MODAL
-================================ */
+========================= */
 
 .modal{
-
   display:none;
-
   position:fixed;
-
   inset:0;
-
-  background:
-  rgba(10,25,27,.72);
-
-  backdrop-filter:blur(5px);
-
+  background:rgba(16,27,43,.70);
   justify-content:center;
-
   align-items:center;
-
   padding:20px;
-
-  z-index:9999;
-
+  z-index:999;
+  overflow-y:auto;
 }
-
-
-/* ================================
-   ORDER BOX
-================================ */
 
 .box{
-
   width:100%;
-
-  max-width:450px;
-
-  background:#ffffff;
-
-  border-radius:22px;
-
+  max-width:460px;
+  background:#fff;
+  border:1px solid #e1e7ef;
+  border-radius:20px;
   padding:25px;
-
-  box-shadow:
-  0 20px 70px rgba(0,0,0,.25);
-
+  box-shadow:0 20px 60px rgba(0,0,0,.18);
 }
-
 
 .box h2{
-
-  color:#123f43;
-
+  color:#172033;
   margin-bottom:18px;
-
-  font-size:25px;
-
 }
 
 
-/* ================================
+/* =========================
    INPUT
-================================ */
+========================= */
 
 input{
-
   width:100%;
-
   padding:14px;
-
   margin-bottom:12px;
-
-  background:#f7f9f8;
-
-  color:#172326;
-
-  border:1px solid #d8e0dd;
-
+  background:#f7f9fc;
+  color:#172033;
+  border:1px solid #dbe2eb;
   border-radius:10px;
-
   outline:none;
-
-  font-size:15px;
-
+  font-size:14px;
 }
-
 
 input:focus{
-
-  border-color:#20a5aa;
-
-  box-shadow:
-  0 0 0 3px rgba(32,165,170,.10);
-
+  border-color:#147d8d;
+  box-shadow:0 0 0 3px rgba(20,125,141,.10);
 }
 
 
-input[readonly]{
+/* =========================
+   PHONE ERROR
+========================= */
 
-  background:#eef2f1;
-
-  color:#526063;
-
+.phone-error{
+  display:none;
+  color:#d43838;
+  font-size:13px;
+  margin-top:-5px;
+  margin-bottom:10px;
+  font-weight:600;
 }
 
 
-/* ================================
-   CANCEL BUTTON
-================================ */
+/* =========================
+   CANCEL
+========================= */
 
 .cancel{
+  background:#eef1f5;
+  color:#39465a;
+}
 
-  background:#edf0ef;
-
-  color:#263537;
-
-  box-shadow:none;
-
+.cancel:hover{
+  background:#e1e6ed;
 }
 
 
-/* ================================
+/* =========================
    SUCCESS
-================================ */
+========================= */
 
 .success{
-
   display:none;
-
   text-align:center;
-
-  padding:14px;
-
+  padding:15px;
   margin-top:15px;
-
-  background:#eaf8f0;
-
-  border:1px solid #c6e9d4;
-
+  background:#e9faf4;
+  border:1px solid #bcebdc;
   border-radius:10px;
-
-  color:#158046;
-
+  color:#087452;
   font-weight:600;
-
 }
 
 
-/* ================================
+/* =========================
    ERROR
-================================ */
+========================= */
 
 .error{
-
   display:none;
-
   text-align:center;
-
-  padding:14px;
-
+  padding:15px;
   margin-top:15px;
-
   background:#fff0f0;
-
-  border:1px solid #f1caca;
-
+  border:1px solid #f0c4c4;
   border-radius:10px;
-
-  color:#d73535;
-
+  color:#c53636;
   font-weight:600;
-
 }
 
 
-/* ================================
-   NOTE
-================================ */
-
-.note{
-
-  color:#7b8587;
-
-  font-size:13px;
-
-  margin-top:13px;
-
-  line-height:1.5;
-
-  text-align:center;
-
-}
-
-
-/* ================================
+/* =========================
    FOOTER
-================================ */
+========================= */
 
 footer{
-
   text-align:center;
-
-  color:#7b8587;
-
-  padding:35px 15px;
-
-  border-top:1px solid #e2e7e4;
-
-  background:#ffffff;
-
-  font-size:14px;
-
+  color:#7a8595;
+  padding:35px 10px;
+  background:#fff;
+  border-top:1px solid #e5eaf1;
+  margin-top:10px;
 }
 
 
-/* ================================
+/* =========================
    MOBILE
-================================ */
+========================= */
 
 @media(max-width:600px){
 
   header{
-
-    padding:35px 15px;
-
+    padding:32px 15px 28px;
   }
-
 
   header h1{
-
-    font-size:28px;
-
-    letter-spacing:3px;
-
+    font-size:29px;
   }
-
 
   .container{
-
-    padding:18px 14px 35px;
-
+    padding:18px 13px 30px;
   }
-
 
   .info{
-
-    padding:21px;
-
-    border-radius:18px;
-
+    padding:20px;
   }
-
 
   .product{
-
-    padding:21px;
-
-    border-radius:19px;
-
+    padding:20px;
   }
-
 
   .product h2{
-
     font-size:20px;
-
-  }
-
-
-  .sale{
-
-    font-size:26px;
-
   }
 
 }
@@ -750,623 +466,456 @@ footer{
 <body>
 
 
-<!-- ================================
-     HEADER
-================================ -->
+<!-- HEADER -->
 
 <header>
 
-<h1>PRIMEX-ZONE</h1>
+  <h1>PRIMEX-ZONE</h1>
 
-<p>Premium Editing Store</p>
+  <p>Professional Editing Store</p>
 
 </header>
 
 
-
-<!-- ================================
-     MAIN
-================================ -->
-
 <div class="container">
 
 
-<!-- ================================
-     INFORMATION
-================================ -->
+<!-- INFORMATION -->
 
 <div class="info">
 
-<h2>Hello! 👋</h2>
+  <h2>Welcome to PRIMEX-ZONE</h2>
 
-<p>
+  <p>
+    We provide editing resources, customizable websites,
+    Alight Motion tools, CapCut resources, tutorials,
+    trending edit ideas and high-quality video clips.
+  </p>
 
-We Have:
+  <br>
 
-</p>
+  <p>
 
-<p>
+    <strong>Our Services</strong><br><br>
 
-# Web HTML (Customizable)<br>
+    • Web HTML (Customizable)<br>
+    • Editing Packs for Alight Motion & CapCut<br>
+    • Alight Motion Shake, Transitions & Mograph XML<br>
+    • QR & Tutorial Resources<br>
+    • CapCut Shake Tutorials<br>
+    • Trending Edit Ideas<br>
+    • 4K MP4 TikTok & YouTube Clips<br>
+    • Edit Intro & More<br>
+    • FPS Method Tutorials
 
-# Editing Pack! (Only Alight Motion and CapCut)<br>
+  </p>
 
-# Alight Motion Shake, Transitions, Mograph - XML, QR, Tutorial!<br>
+  <br>
 
-# CapCut Shake Tutorials!<br>
+  <p>
 
-# Trending Edits Idea!<br>
+    <strong>Contact Us For More Information</strong><br>
 
-# 4K MP4 TikTok, YouTube Clips!<br>
+    Email: rahatexe52@gmail.com<br>
 
-# Edit Intro etc! 🔥<br>
+    WhatsApp: 01606873660
 
-# FPS Method Tutorials
-
-</p>
-
-<br>
-
-<p>
-
-<strong>
-Contact Us For Others Information!
-</strong>
-
-<br>
-
-Email:
-rahatexe52@gmail.com
-
-<br>
-
-WhatsApp:
-01606873660
-
-</p>
+  </p>
 
 </div>
 
 
-
-<!-- ================================
-     PRODUCTS
-================================ -->
+<!-- PRODUCTS -->
 
 <div class="products">
-
 
 
 <!-- PRODUCT 1 -->
 
 <div class="product">
 
+  <h2>Premium AM Shake XML</h2>
 
-<h2>
-Premium AM Shake XML
-</h2>
+  <div class="stock">
+    IN STOCK
+  </div>
 
+  <div class="old">
+    Regular Price: 299 BDT
+  </div>
 
-<div class="stock">
-In Stock
-</div>
+  <div class="sale">
+    199 BDT
+  </div>
 
+  <div class="details">
 
-<div class="old">
-Price: 299 BDT
-</div>
+    <h3>Detailed Information</h3>
 
+    <ul>
 
-<div class="sale">
-Sale Price: 199 BDT
-</div>
+      <li>Premium Alight Motion Shake XML</li>
+      <li>Smooth Shake & Transition Effects</li>
+      <li>Mograph Support</li>
+      <li>Easy to Import</li>
+      <li>QR Resource Included</li>
+      <li>Tutorial Support</li>
+      <li>Designed for Alight Motion</li>
 
+    </ul>
 
+  </div>
 
-<div class="details">
-
-
-<div class="details-title">
-Details
-</div>
-
-
-<ul>
-
-<li>
-Premium Alight Motion Shake XML
-</li>
-
-<li>
-Smooth and high quality shake
-</li>
-
-<li>
-Easy to import and use
-</li>
-
-<li>
-Suitable for anime and velocity edits
-</li>
-
-<li>
-Works with Alight Motion
-</li>
-
-</ul>
-
+  <button
+    onclick="openOrder('Premium AM Shake XML','199 BDT')"
+  >
+    Order Now
+  </button>
 
 </div>
-
-
-
-<button
-onclick="openOrder(
-'Premium AM Shake XML',
-'199 BDT'
-)"
->
-
-Order Now
-
-</button>
-
-
-</div>
-
 
 
 <!-- PRODUCT 2 -->
 
 <div class="product">
 
+  <h2>Web HTML (Customizable)</h2>
 
-<h2>
-Web HTML (Customizable)
-</h2>
+  <div class="stock">
+    IN STOCK
+  </div>
 
+  <div class="old">
+    Regular Price: 199 BDT
+  </div>
 
-<div class="stock">
-In Stock
-</div>
+  <div class="sale">
+    99 BDT
+  </div>
 
+  <div class="details">
 
-<div class="old">
-Price: 199 BDT
-</div>
+    <h3>Detailed Information</h3>
 
+    <ul>
 
-<div class="sale">
-Sale Price: 99 BDT
-</div>
+      <li>Fully Customizable HTML Website</li>
+      <li>Responsive Mobile Design</li>
+      <li>Product Store Layout</li>
+      <li>Custom Product Sections</li>
+      <li>Order Form Included</li>
+      <li>EmailJS Order Notification</li>
+      <li>Easy to Edit</li>
+      <li>Suitable for Personal & Business Use</li>
 
+    </ul>
 
+  </div>
 
-<div class="details">
-
-
-<div class="details-title">
-Details
-</div>
-
-
-<ul>
-
-<li>
-Fully customizable HTML website
-</li>
-
-<li>
-Easy to edit text and information
-</li>
-
-<li>
-Mobile responsive design
-</li>
-
-<li>
-Clean and modern design
-</li>
-
-<li>
-Suitable for personal or editing stores
-</li>
-
-</ul>
-
+  <button
+    onclick="openOrder('Web HTML (Customizable)','99 BDT')"
+  >
+    Order Now
+  </button>
 
 </div>
 
 
+<!-- PRODUCT 3 -->
 
-<button
-onclick="openOrder(
-'Web HTML (Customizable)',
-'99 BDT'
-)"
->
+<div class="product">
 
-Order Now
+  <h2>Customisable Edit</h2>
 
-</button>
+  <div class="out-stock">
+    OUT OF STOCK
+  </div>
 
+  <div class="old">
+    Regular Price: 299 BDT
+  </div>
+
+  <div class="sale">
+    199 BDT
+  </div>
+
+  <div class="details">
+
+    <h3>Detailed Information</h3>
+
+    <ul>
+
+      <li>Customizable Editing Project</li>
+      <li>Mixtape Edit</li>
+      <li>Manga Edit</li>
+      <li>Anime Edit</li>
+      <li>Football Edit</li>
+      <li>Custom Edit Styles Available</li>
+      <li>CapCut & Alight Motion Only</li>
+
+    </ul>
+
+  </div>
+
+  <button
+    class="out-button"
+    disabled
+  >
+    OUT OF STOCK
+  </button>
 
 </div>
 
 
-
 </div>
 
 </div>
 
 
-
-<!-- ================================
-     ORDER MODAL
-================================ -->
+<!-- ORDER MODAL -->
 
 <div
-class="modal"
-id="orderModal"
+  class="modal"
+  id="orderModal"
 >
 
+  <div class="box">
 
-<div class="box">
+    <h2>Place Order</h2>
 
+    <form onsubmit="sendOrder(event)">
 
-<h2>
-Place Order
-</h2>
+      <input
+        type="text"
+        id="name"
+        placeholder="Name"
+        required
+      >
 
+      <input
+        type="tel"
+        id="whatsapp"
+        placeholder="WhatsApp Number"
+        inputmode="numeric"
+        maxlength="11"
+        required
+      >
 
+      <!--
+        ভুল নম্বর হলে এখানে
+        Please enter a correct number.
+        দেখাবে
+      -->
 
-<form
-onsubmit="sendOrder(event)"
->
-
-
-<!-- NAME -->
-
-<input
-type="text"
-id="name"
-placeholder="Name"
-required
->
-
-
-
-<!-- WHATSAPP -->
-
-<input
-type="tel"
-id="whatsapp"
-placeholder="WhatsApp Number"
-maxlength="11"
-inputmode="numeric"
-required
->
+      <div
+        id="phoneError"
+        class="phone-error"
+      >
+        Please enter a correct number.
+      </div>
 
 
-
-<!-- QUANTITY -->
-
-<input
-type="number"
-id="quantity"
-placeholder="Quantity"
-min="1"
-value="1"
-required
->
+      <input
+        type="number"
+        id="quantity"
+        placeholder="Quantity"
+        min="1"
+        value="1"
+        required
+      >
 
 
-
-<!-- PRODUCT -->
-
-<input
-type="text"
-id="product"
-placeholder="Product"
-readonly
->
+      <input
+        type="text"
+        id="product"
+        placeholder="Product"
+        readonly
+      >
 
 
-
-<!-- PRICE -->
-
-<input
-type="text"
-id="price"
-placeholder="Price"
-readonly
->
+      <input
+        type="text"
+        id="price"
+        placeholder="Price"
+        readonly
+      >
 
 
-
-<!-- SUBMIT -->
-
-<button
-type="submit"
-id="submitButton"
->
-
-Place Order
-
-</button>
+      <button
+        type="submit"
+        id="submitButton"
+      >
+        Place Order
+      </button>
 
 
+      <button
+        type="button"
+        class="cancel"
+        onclick="closeOrder()"
+      >
+        Cancel
+      </button>
 
-<!-- CANCEL -->
-
-<button
-type="button"
-class="cancel"
-onclick="closeOrder()"
->
-
-Cancel
-
-</button>
+    </form>
 
 
-</form>
+    <div
+      class="success"
+      id="successMessage"
+    >
+      Order sent successfully! ✅
+    </div>
 
 
+    <div
+      class="error"
+      id="errorMessage"
+    >
+      Order could not be sent. Please try again.
+    </div>
 
-<!-- SUCCESS -->
-
-<div
-class="success"
-id="successMessage"
->
-
-Order sent successfully! ✅
+  </div>
 
 </div>
 
 
-
-<!-- ERROR -->
-
-<div
-class="error"
-id="errorMessage"
->
-
-Please enter a correct number.
-
-</div>
-
-
-
-<div class="note">
-
-Your order information will be sent to our email.
-
-</div>
-
-
-</div>
-
-</div>
-
-
-
-<!-- ================================
-     FOOTER
-================================ -->
+<!-- FOOTER -->
 
 <footer>
 
-© 2026 PRIMEX-ZONE
-
-<br>
-
-Created By Rahat
+  © 2026 PRIMEX-ZONE
 
 </footer>
 
 
-
 <script>
 
-/* =========================================
-   EMAILJS SETTINGS
-========================================= */
+/* =========================
+   EMAILJS
+========================= */
 
 const EMAILJS_PUBLIC_KEY =
-"7OLDMzyS7ISX39_H_";
+  "7OLDMzyS7ISX39_H_";
 
 const EMAILJS_SERVICE_ID =
-"service_nax4ioi";
+  "service_nax4ioi";
 
 const EMAILJS_TEMPLATE_ID =
-"template_9do9vgu";
+  "template_9do9vgu";
 
 
 emailjs.init({
-
-  publicKey:
-  EMAILJS_PUBLIC_KEY
-
+  publicKey: EMAILJS_PUBLIC_KEY
 });
 
 
-
-/* =========================================
+/* =========================
    OPEN ORDER
-========================================= */
+========================= */
 
-function openOrder(product,price){
-
+function openOrder(product, price){
 
   document.getElementById("product").value =
-  product;
-
+    product;
 
   document.getElementById("price").value =
-  price;
-
+    price;
 
   document.getElementById("orderModal").style.display =
-  "flex";
-
+    "flex";
 
   document.getElementById("successMessage").style.display =
-  "none";
-
+    "none";
 
   document.getElementById("errorMessage").style.display =
-  "none";
+    "none";
 
+  document.getElementById("phoneError").style.display =
+    "none";
 
 }
 
 
-
-/* =========================================
+/* =========================
    CLOSE ORDER
-========================================= */
+========================= */
 
 function closeOrder(){
 
-
   document.getElementById("orderModal").style.display =
-  "none";
-
+    "none";
 
 }
 
 
-
-/* =========================================
+/* =========================
    SEND ORDER
-========================================= */
+========================= */
 
 function sendOrder(event){
-
 
   event.preventDefault();
 
 
   const whatsapp =
-  document
-  .getElementById("whatsapp")
-  .value
-  .trim();
+    document.getElementById("whatsapp").value.trim();
 
+
+  const phoneError =
+    document.getElementById("phoneError");
 
 
   /*
-
-     NUMBER VALIDATION
-
-     01 + 9 digits
-     Total = 11 digits
-
+    Correct number format:
+    01 + 9 digits
   */
-
 
   if(!/^01[0-9]{9}$/.test(whatsapp)){
 
-
-    document.getElementById(
-      "errorMessage"
-    ).innerText =
-    "Please enter a correct number.";
-
-
-    document.getElementById(
-      "errorMessage"
-    ).style.display =
-    "block";
-
-
-    document.getElementById(
-      "successMessage"
-    ).style.display =
-    "none";
-
+    phoneError.style.display =
+      "block";
 
     return;
 
   }
 
 
+  phoneError.style.display =
+    "none";
 
-  /* =========================================
-     BUTTON
-  ========================================= */
 
   const button =
-  document.getElementById(
-    "submitButton"
-  );
+    document.getElementById("submitButton");
 
-
-
-  /* =========================================
-     TEMPLATE DATA
-  ========================================= */
 
   const templateParams = {
 
-
     customer_name:
-
-    document
-    .getElementById("name")
-    .value,
-
+      document.getElementById("name").value,
 
     customer_whatsapp:
-
-    whatsapp,
-
+      whatsapp,
 
     product_name:
-
-    document
-    .getElementById("product")
-    .value,
-
+      document.getElementById("product").value,
 
     product_price:
-
-    document
-    .getElementById("price")
-    .value,
-
+      document.getElementById("price").value,
 
     quantity:
-
-    document
-    .getElementById("quantity")
-    .value,
-
+      document.getElementById("quantity").value,
 
     order_date:
-
-    new Date()
-    .toLocaleString("en-BD")
-
+      new Date().toLocaleString("en-BD")
 
   };
 
 
-
-  /* =========================================
-     SENDING
-  ========================================= */
-
-  button.disabled =
-  true;
-
+  button.disabled = true;
 
   button.innerText =
-  "Sending...";
-
+    "Sending...";
 
 
   emailjs.send(
@@ -1382,70 +931,45 @@ function sendOrder(event){
 
   .then(function(response){
 
-
     console.log(
-
       "SUCCESS!",
-
       response.status,
-
       response.text
-
     );
-
-
-
-    document.getElementById(
-      "successMessage"
-    ).innerText =
-    "Order sent successfully! ✅";
 
 
     document.getElementById(
       "successMessage"
     ).style.display =
-    "block";
+      "block";
 
 
     document.getElementById(
       "errorMessage"
     ).style.display =
-    "none";
+      "none";
 
 
+    document.getElementById("name").value =
+      "";
 
-    document.getElementById(
-      "name"
-    ).value =
-    "";
+    document.getElementById("whatsapp").value =
+      "";
 
-
-    document.getElementById(
-      "whatsapp"
-    ).value =
-    "";
-
-
-    document.getElementById(
-      "quantity"
-    ).value =
-    "1";
-
+    document.getElementById("quantity").value =
+      "1";
 
 
     button.disabled =
-    false;
-
+      false;
 
     button.innerText =
-    "Place Order";
-
+      "Place Order";
 
   })
 
 
   .catch(function(error){
-
 
     console.log(
       "FAILED...",
@@ -1456,54 +980,24 @@ function sendOrder(event){
     document.getElementById(
       "successMessage"
     ).style.display =
-    "none";
-
-
-    document.getElementById(
-      "errorMessage"
-    ).innerText =
-    "Order could not be sent. Please try again.";
+      "none";
 
 
     document.getElementById(
       "errorMessage"
     ).style.display =
-    "block";
+      "block";
 
 
     button.disabled =
-    false;
-
+      false;
 
     button.innerText =
-    "Place Order";
-
+      "Place Order";
 
   });
 
-
 }
-
-
-
-/* =========================================
-   CLOSE MODAL BY CLICKING OUTSIDE
-========================================= */
-
-document
-.getElementById("orderModal")
-.addEventListener(
-  "click",
-  function(event){
-
-    if(event.target === this){
-
-      closeOrder();
-
-    }
-
-  }
-);
 
 </script>
 
